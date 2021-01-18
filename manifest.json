@@ -1,0 +1,28 @@
+{
+  "name": "Block Sites By VU DANG TINH",
+  "version": "1.0",
+  "description": "Kiểm soát\nthời gian của bạn\nChặn các ứng dụng và trang web gây mất tập trung.\nĐặt năng suất làm ưu tiên của bạn",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts":["background.js"]
+  },
+  "permissions": [
+    "tabs",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "declarativeContent"
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "icons": { "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png" }
+}
